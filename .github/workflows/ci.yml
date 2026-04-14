@@ -24,7 +24,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Render default variants (and post PR preview)
         id: default
@@ -33,6 +33,7 @@ jobs:
           input: examples/**/*.svgs
           output-dir: rendered/default
           comment-on-pr: 'true'
+          github-token: ${{ github.token }}
 
       - name: Render retheme variants (template variable override)
         id: themed
@@ -59,7 +60,7 @@ jobs:
           echo "Download the \`rendered-examples\` artifact to preview each SVG." >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload rendered examples
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: rendered-examples
           path: rendered/

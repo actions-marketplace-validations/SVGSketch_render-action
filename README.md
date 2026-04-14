@@ -43,7 +43,7 @@ jobs:
   render:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: svgsketch/render-action@v1
 ```
 
@@ -93,7 +93,7 @@ strategy:
   matrix:
     theme: [light, dark]
 steps:
-  - uses: actions/checkout@v4
+  - uses: actions/checkout@v5
   - uses: svgsketch/render-action@v1
     with:
       input: icons/*.svgs
@@ -111,7 +111,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - id: render
         uses: svgsketch/render-action@v1
         with:
@@ -132,7 +132,7 @@ jobs:
         uses: svgsketch/render-action@v1
         with:
           output-dir: rendered
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: rendered-svgs
           path: rendered/
@@ -156,7 +156,7 @@ jobs:
       contents: read
       pull-requests: write    # required to post/update the comment
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: svgsketch/render-action@v1
         with:
           input: designs/**/*.svgs

@@ -66,12 +66,12 @@ inputs:
     default: '400'
   github-token:
     description: >-
-      Token used to post/update the PR comment. When omitted, the action
-      falls back to the `GITHUB_TOKEN` environment variable (which is
-      automatically set by the runner). Override only if you need a
-      different identity (e.g. a bot account) to author the comment.
+      Token used to post/update the PR comment. Defaults to the workflow's
+      automatic `${{ github.token }}`, which is sufficient for most
+      usage. Override only if you need a different identity (e.g. a bot
+      account) to author the comment.
     required: false
-    default: ''
+    default: ${{ github.token }}
 
 outputs:
   files:
