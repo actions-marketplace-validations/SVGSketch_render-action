@@ -32,7 +32,7 @@ jobs:
         with:
           input: examples/**/*.svgs
           output-dir: rendered/default
-          comment-on-pr: 'true'
+          comment-on-pr: "true"
           github-token: ${{ github.token }}
 
       - name: Render retheme variants (template variable override)
@@ -49,6 +49,15 @@ jobs:
             clientColor=#8b5cf6
             apiColor=#ec4899
             dataColor=#f59e0b
+
+      - name: Assert rendered outputs
+        env:
+          DEFAULT_COUNT: ${{ steps.default.outputs.count }}
+          THEMED_COUNT: ${{ steps.themed.outputs.count }}
+        run: |
+          test "$DEFAULT_COUNT" = "3"
+          test "$THEMED_COUNT" = "3"
+          node scripts/assert-rendered.mjs rendered
 
       - name: Summary
         run: |

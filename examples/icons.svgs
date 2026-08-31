@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 8,
   "documentMetadata": {
     "title": "Icon Set",
     "description": "A grid of 10 icons built from first-class primitives (circle, rectangle, line, star, triangle, arrow, gear, ring, cross). Override the accent template variable to retheme the whole set.",

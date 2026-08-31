@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 8,
   "documentMetadata": {
     "title": "Monthly Active Users",
     "description": "A themed bar chart showing H1 growth. Override {{title}}, {{subtitle}}, {{barColorStart}} and {{barColorEnd}} at render time to produce a themed variant without touching the source.",
@@ -29,6 +29,26 @@
       "type": "color",
       "defaultValue": "#1a5490",
       "label": "Bar gradient — bottom color"
+    }
+  ],
+  "library": [
+    {
+      "kind": "linear-gradient",
+      "id": "bar-gradient",
+      "name": "Bar gradient",
+      "gradient": {
+        "type": "linear-gradient",
+        "opacity": 1,
+        "spreadMethod": "pad",
+        "x1": 0,
+        "y1": 0,
+        "x2": 0,
+        "y2": 1,
+        "stops": [
+          { "color": "{{barColorStart}}", "offset": 0, "opacity": 1 },
+          { "color": "{{barColorEnd}}", "offset": 1, "opacity": 1 }
+        ]
+      }
     }
   ],
   "viewboxes": [
@@ -230,18 +250,7 @@
         "height": 66,
         "cornerRadius": 4,
         "fillType": "linear-gradient",
-        "fillGradient": {
-          "opacity": 1,
-          "spreadMethod": "pad",
-          "x1": 0,
-          "y1": 0,
-          "x2": 0,
-          "y2": 1,
-          "stops": [
-            { "color": "{{barColorStart}}", "offset": 0, "opacity": 1 },
-            { "color": "{{barColorEnd}}", "offset": 1, "opacity": 1 }
-          ]
-        },
+        "fillLibraryId": "bar-gradient",
         "borderColor": "transparent",
         "borderWidth": 0,
         "opacity": 1
@@ -257,18 +266,7 @@
         "height": 102,
         "cornerRadius": 4,
         "fillType": "linear-gradient",
-        "fillGradient": {
-          "opacity": 1,
-          "spreadMethod": "pad",
-          "x1": 0,
-          "y1": 0,
-          "x2": 0,
-          "y2": 1,
-          "stops": [
-            { "color": "{{barColorStart}}", "offset": 0, "opacity": 1 },
-            { "color": "{{barColorEnd}}", "offset": 1, "opacity": 1 }
-          ]
-        },
+        "fillLibraryId": "bar-gradient",
         "borderColor": "transparent",
         "borderWidth": 0,
         "opacity": 1
@@ -284,18 +282,7 @@
         "height": 144,
         "cornerRadius": 4,
         "fillType": "linear-gradient",
-        "fillGradient": {
-          "opacity": 1,
-          "spreadMethod": "pad",
-          "x1": 0,
-          "y1": 0,
-          "x2": 0,
-          "y2": 1,
-          "stops": [
-            { "color": "{{barColorStart}}", "offset": 0, "opacity": 1 },
-            { "color": "{{barColorEnd}}", "offset": 1, "opacity": 1 }
-          ]
-        },
+        "fillLibraryId": "bar-gradient",
         "borderColor": "transparent",
         "borderWidth": 0,
         "opacity": 1
@@ -311,18 +298,7 @@
         "height": 198,
         "cornerRadius": 4,
         "fillType": "linear-gradient",
-        "fillGradient": {
-          "opacity": 1,
-          "spreadMethod": "pad",
-          "x1": 0,
-          "y1": 0,
-          "x2": 0,
-          "y2": 1,
-          "stops": [
-            { "color": "{{barColorStart}}", "offset": 0, "opacity": 1 },
-            { "color": "{{barColorEnd}}", "offset": 1, "opacity": 1 }
-          ]
-        },
+        "fillLibraryId": "bar-gradient",
         "borderColor": "transparent",
         "borderWidth": 0,
         "opacity": 1
@@ -338,18 +314,7 @@
         "height": 246,
         "cornerRadius": 4,
         "fillType": "linear-gradient",
-        "fillGradient": {
-          "opacity": 1,
-          "spreadMethod": "pad",
-          "x1": 0,
-          "y1": 0,
-          "x2": 0,
-          "y2": 1,
-          "stops": [
-            { "color": "{{barColorStart}}", "offset": 0, "opacity": 1 },
-            { "color": "{{barColorEnd}}", "offset": 1, "opacity": 1 }
-          ]
-        },
+        "fillLibraryId": "bar-gradient",
         "borderColor": "transparent",
         "borderWidth": 0,
         "opacity": 1

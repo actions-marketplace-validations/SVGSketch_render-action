@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 8,
   "documentMetadata": {
     "title": "System Architecture",
     "description": "A three-tier system diagram showing client, API, and data layers connected by request arrows. Lives in git, re-rendered on every merge.",
